@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+
+/* Menu osea navegador etc xd */
+.menu{
+    width: 100%;
+    height: 55px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 1px solid rgb(236, 213, 213);
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+}
+
+.menu h3 a{
+    text-decoration: none;
+    font-family: 'Lobster', cursive;
+    font-family: 'Lobster Two', cursive;
+    font-weight: 600;
+    font-size: 2em;
+    color: rgb(77, 7, 7);
+    letter-spacing: .4px;
+}
+
+.busqueda{
+    width: 220px;
+    height: 28px;
+    border: 1px solid rgb(245, 198, 198);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.busqueda input{
+    width: 55%;
+    height: 100%;
+    border: none;
+    outline: none;
+    color:rgb(7, 105, 105);
+}
+.busqueda i{
+    display: inline-block;
+    text-align:end;
+    padding: .25em 0;
+    width: 45%;
+    height: 100%;
+    color:rgb(37, 185, 185);
+}
+
+.nav{
+    width: 200px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav a{
+    margin: 0 .6em;
+}
+.nav a svg{
+    width: 1.35em;
+    height: 1.4em;
+}
+.nav a img{
+    z-index: 1000;
+    display: inline;
+    max-width: 28px;
+    border-radius: 50%;
+    /* border: 1px solid black;  */
+    /* padding: 2px; */
+}
+
+/* formulario */
+.Publicar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 21, 22, 0.11);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cerrar{
+    display: block;
+    position: absolute;
+    z-index: 100000;
+    top: 10px;
+    right: 10px;
+    font-size: 2em;
+    cursor: pointer;
+    color: rgb(7, 105, 105);
+    transition: all .3s ease;
+}
+
+.form{
+    max-width: 500px;
+    height: 550px;
+    width: 90%;
+    background-color: rgb(247, 248, 248);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: all .3s ease;
+}
+
+.form div h2{
+    font-size: 2em;
+    font-weight: 300;
+    color: rgb(77, 7, 7);
+}
+
+.test1,.test2,.testImg{
+    width: 70%;
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.test1 label,.testImg label{
+    font-size: 1.05em;
+    margin-right: 0.3em;
+}
+.test1 input,.testImg input{
+    width: 100%;
+    margin: .3em 0;
+    padding: .4em 1em .4em .1em;
+    border: none;
+    font-size: 0.75em;
+    color: rgb(19, 150, 150);
+    border-bottom: 1px solid rgb(2, 2, 70);
+    outline: none;
+}
+
+.test2 textarea{
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 20px;
+    padding: .2em;
+    max-height: 100px;
+    color: rgb(19, 150, 150);
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(2, 2, 70);
+}
+
+.enviar button{
+    z-index: 1000000;
+    padding: .4em 1.5em .4em;
+    font-size: 1.1em;
+    background-color: rgb(4, 75, 97);
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+.enviar button:focus{
+    background-color: rgb(2, 42, 54);
+}
+
+/* main ,es decir publicaciones */
+
+
+#muroPublicaciones{
+    width: 70%;
+    max-height: auto;
+    min-height: calc(100vh - 100px);
+    margin: 0 auto;
+    margin-top: 70px;
+}
+
+.cajaPublicacion{
+    border: 1px solid rgb(216, 216, 241);
+    width: 550px;
+    min-height: 450px;
+    height: auto;
+    /* max-height: 650px; */
+    margin: 1em auto;
+}
+
+.usuario{
+    display: block;
+    max-width: 100%;
+    font-size: 1.5em;
+    padding: .5em .5em;
+    color: rgb(80, 38, 4);
+}
+
+.cajaPublicacion p i{
+    color: rgb(7, 40, 83);
+}
+.comentario{
+    display: block;
+    max-width: 100%;
+    font-size: 0.9em;
+    font-weight: 300;
+    padding: .2em 1.5em;
+    color: rgb(20,10,0);
+    margin: .3em 0;
+}
+
+.cajaPublicacion img{
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+    overflow-y: hidden;
+}
+
+.cajaPublicacion button{
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    z-index: 11100;
+    border: none;
+    outline: none;
+    font-size: 2em;
+}
+
+#boton{
+    color: rgb(165, 14, 14);
+}
